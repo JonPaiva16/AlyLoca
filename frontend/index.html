@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sistema de Locação - Projeto Aula 009</title>
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-gray-50 text-slate-800">
+  <header class="bg-[#0033A0] text-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="rounded-full bg-white p-2 text-[#0033A0] font-bold">🚗</div>
+        <div>
+          <h1 class="text-xl font-semibold">Sistema de Locação</h1>
+          <p class="text-sm opacity-90">Projeto Aula 009 — Tema: Unidas</p>
+        </div>
+      </div>
+      <nav class="flex gap-3 items-center">
+        <button onclick="loadAll()" class="px-3 py-2 bg-[#00ADEF] hover:bg-[#008fc0] rounded text-sm">Atualizar</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6 grid gap-6 grid-cols-1 lg:grid-cols-3">
+    <section class="lg:col-span-2 space-y-4">
+      <div class="bg-white rounded-lg shadow p-4">
+        <h2 class="text-lg font-semibold mb-3">Locações</h2>
+
+        <form id="locacaoForm" class="grid grid-cols-1 md:grid-cols-3 gap-3" onsubmit="createLocacao(event)">
+          <select id="loc_cliente" name="cliente_id" required class="p-2 border rounded"></select>
+          <select id="loc_veiculo" name="veiculo_id" required class="p-2 border rounded"></select>
+          <div class="flex gap-2">
+            <input type="date" name="data_inicio" required class="p-2 border rounded w-full">
+            <input type="date" name="data_fim" required class="p-2 border rounded w-full">
+          </div>
+          <div class="md:col-span-3">
+            <button class="px-4 py-2 bg-[#0033A0] text-white rounded hover:opacity-90">Criar Locação</button>
+          </div>
+        </form>
+
+        <div id="locacoesList" class="mt-4"></div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-4">
+        <h2 class="text-lg font-semibold mb-3">Pagamentos</h2>
+        <form id="pagForm" onsubmit="createPagamento(event)" class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <select id="pag_locacao" name="locacao_id" required class="p-2 border rounded"></select>
+          <input name="valor" placeholder="Valor" required class="p-2 border rounded">
+          <input name="metodo" placeholder="Método (ex: cartão)" class="p-2 border rounded">
+          <div class="md:col-span-3">
+            <button class="px-4 py-2 bg-[#10B981] text-white rounded hover:opacity-90">Registrar Pagamento</button>
+          </div>
+        </form>
+        <div id="pagamentosList" class="mt-4"></div>
+      </div>
+    </section>
+
+    <aside class="space-y-4">
+      <div class="bg-white rounded-lg shadow p-4">
+        <h2 class="text-lg font-semibold mb-3">Clientes</h2>
+        <form id="clienteForm" onsubmit="createCliente(event)" class="space-y-2">
+          <input name="nome" placeholder="Nome" required class="p-2 border rounded w-full">
+          <input name="email" placeholder="Email" class="p-2 border rounded w-full">
+          <input name="telefone" placeholder="Telefone" class="p-2 border rounded w-full">
+          <input name="cpf" placeholder="CPF" class="p-2 border rounded w-full">
+          <button class="px-4 py-2 bg-[#0033A0] text-white rounded hover:opacity-90 w-full">Adicionar Cliente</button>
+        </form>
+        <div id="clientesList" class="mt-3"></div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-4">
+        <h2 class="text-lg font-semibold mb-3">Veículos</h2>
+        <form id="veiculoForm" onsubmit="createVeiculo(event)" class="space-y-2">
+          <input name="marca" placeholder="Marca" required class="p-2 border rounded w-full">
+          <input name="modelo" placeholder="Modelo" required class="p-2 border rounded w-full">
+          <input name="placa" placeholder="Placa" required class="p-2 border rounded w-full">
+          <input name="ano" placeholder="Ano" class="p-2 border rounded w-full">
+          <input name="valor_diaria" placeholder="Valor diária" required class="p-2 border rounded w-full">
+          <button class="px-4 py-2 bg-[#00ADEF] text-white rounded hover:opacity-90 w-full">Adicionar Veículo</button>
+        </form>
+        <div id="veiculosList" class="mt-3"></div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="text-center text-sm text-gray-500 py-6">
+    Projeto Aula 009 — Sistema de Locação • Tema: Unidas
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
