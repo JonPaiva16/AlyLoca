@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlyLoca</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="alylooca.png.png" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <!-- Símbolo genérico ou logo -->
+        <div class="logo">
+          <div class="logo">
+            <div class="logo-img">
+              <img src="aly.png.png" alt="Logo AlyLoca" />
+            </div>
+            <span class="logo-text">AlyLoca</span>
+          </div>
+        </div>
+
+        <!-- Ícone de perfil -->
+        <div class="actions">
+          <button class="icon-btn" aria-label="Perfil">👤</button>
+        </div>
+      </div>
+    </header>
+
+   
+
+      <main class="main-content">
+        <!-- CARD: Cadastro de Carro -->
+        <div class="card">
+
+          <h2>Cadastrar Carro</h2>
+          <div class="profile-car-photo">
+  <img src="cliente.png" alt="Foto do Cliente" />
+</div>
+
+          <form>
+            <label>Modelo:</label>
+            <input type="text" placeholder="Ex: Onix 1.0" />
+
+            <label>Placa:</label>
+            <input type="text" placeholder="Ex: ABC-1234" />
+
+            <label>Categoria:</label>
+            <select>
+              <option>Hatch</option>
+              <option>Sedan</option>
+              <option>SUV</option>
+            </select>
+
+            <label>Preço por dia (R$):</label>
+            <input type="number" step="0.01" placeholder="Ex: 120.00" />
+
+            <button type="submit">Salvar</button>
+          </form>
+        </div>
+
+        <!-- CARD: Cadastro de Cliente -->
+        <div class="card">
+          <h2>Cadastrar Cliente</h2>
+          <div class="profile-photo">
+              <img src="login.png" alt="Foto do Cliente" />
+           </div>
+
+          <form>
+            <label>Nome:</label>
+            <input type="text" placeholder="Ex: João da Silva" />
+
+            <label>CPF:</label>
+            <input type="text" placeholder="000.000.000-00" />
+
+            <label>Telefone:</label>
+            <input type="tel" placeholder="(00) 99999-9999" />
+
+            <label>E-mail:</label>
+            <input type="email" placeholder="cliente@email.com" />
+
+            <button type="submit">Salvar</button>
+          </form>
+        </div>
+      </main>
+    </main>
+  </body>
+</html>
