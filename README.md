@@ -1,4 +1,4 @@
-📘 AutoGo — Sistema de Locação de Veículos
+📘 Alyloca — Sistema de Locação de Veículos
 
 Um projeto completo com FastAPI + SQLite + Frontend em HTML/CSS/JS
 
@@ -206,3 +206,5 @@ O Frontend funciona diretamente pelo FastAPI (não precisa de servidor adicional
 📜 Licença
 
 Este projeto foi criado para fins acadêmicos e pode ser usado livremente.
+
+http://localhost:8000/
