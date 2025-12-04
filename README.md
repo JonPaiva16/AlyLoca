@@ -82,20 +82,6 @@ DELETE	/api/clientes/{id}	Remove cliente
 
 🔹 Veículos, Locações e Pagamentos seguem o mesmo padrão.
 
-🏷 Melhorias Futuras (Sugestões)
-
-Login/autenticação JWT
-
-Relatórios e PDF de comprovante
-
-Controle de disponibilidade de veículos
-
-Dashboard com gráficos
-
-Upload de imagens dos carros
-
-Deploy online (Railway/Render/VPS)
-
 📄 Licença
 
 Projeto acadêmico — livre para uso e modificação.
